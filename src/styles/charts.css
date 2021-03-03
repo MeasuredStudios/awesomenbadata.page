@@ -1,0 +1,9 @@
+svg {
+  display: flex;
+  overflow: visible;
+}
+
+.court-outline {
+  fill: none;
+  stroke: #3b312b;
+}

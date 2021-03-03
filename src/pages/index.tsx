@@ -1,25 +1,23 @@
 import * as React from 'react';
+import 'twin.macro';
 import Layout from '../components/Layout';
 import { PageProps } from 'gatsby';
 
 const Home: React.FC<PageProps> = () => (
   <Layout>
     <div tw="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
-      <div tw="flex items-center justify-between ">
+      <div tw="flex items-center justify-between">
         <h3 tw="font-bold sm:hidden">League</h3>
-        <button tw="flex items-center py-1 pr-1 rounded-md text-thirteen text-primary bg-grey focus:outline-none">
+        <button tw="flex items-center py-1 pr-1 rounded-md text-primary focus:outline-none">
           <p id="toggle1" tw="px-3 py-1 ml-1 rounded-md">
             West
           </p>
-          <p
-            id="toggle2"
-            tw="px-4 py-1 rounded-md text-thirteen bg-blackish text-white"
-          >
+          <p id="toggle2" tw="px-4 py-1 rounded-md">
             East
           </p>
         </button>
-        <div tw="px-2 py-2 rounded-md bg-grey">
-          <select tw="bg-grey text-thirteen text-blackish focus:outline-none">
+        <div tw="px-2 py-2 rounded-md ">
+          <select tw="focus:outline-none">
             <option>This Week</option>
           </select>
         </div>
@@ -54,9 +52,7 @@ const Home: React.FC<PageProps> = () => (
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <h2 tw="font-bold text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
-        Table
-      </h2>
+      <h2 tw="font-bold text-4xl tracking-tight mb-4 mt-8">Table</h2>
       <div tw="my-2">
         <div tw="bg-gray-200 text-sm text-gray-500 leading-none border-2 border-gray-200 rounded-full inline-flex">
           <button
@@ -73,7 +69,7 @@ const Home: React.FC<PageProps> = () => (
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="fill-current w-4 h-4 mr-2"
+              tw="fill-current w-4 h-4 mr-2"
             >
               <rect x="3" y="3" width="7" height="7"></rect>
               <rect x="14" y="3" width="7" height="7"></rect>
@@ -96,7 +92,7 @@ const Home: React.FC<PageProps> = () => (
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="fill-current w-4 h-4 mr-2"
+              tw="fill-current w-4 h-4 mr-2"
             >
               <line x1="8" y1="6" x2="21" y2="6"></line>
               <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -113,16 +109,16 @@ const Home: React.FC<PageProps> = () => (
         Title
       </h2>
       <p></p>
-      <div tw="flex items-center justify-between lg:mt-12 mt-88 xs:flex-wrap">
-        <h4 tw="pb-3 font-semibold text-twentytwo">Toggle</h4>
-        <button tw="flex items-center py-1 pr-1 rounded-md xs:w-full text-thirteen text-primary bg-grey focus:outline-none ">
+      <div tw="flex items-center justify-between lg:mt-12  sm:flex-wrap">
+        <h4 tw="pb-3 font-semibold ">Toggle</h4>
+        <button tw="flex items-center py-1 pr-1 rounded-md sm:w-full text-primary  focus:outline-none ">
           <p
             id="toggle11"
-            tw="px-3 px-4 py-1 ml-1 text-white rounded-md xs:flex-1 bg-blackish "
+            tw="px-3 px-4 py-1 ml-1 text-white rounded-md sm:flex-1  "
           >
             Toggle 1
           </p>
-          <p id="toggle22" tw="px-4 py-1 rounded-md xs:flex-1 text-thirteen ">
+          <p id="toggle22" tw="px-4 py-1 rounded-md sm:flex-1 ">
             Toggle 2
           </p>
         </button>

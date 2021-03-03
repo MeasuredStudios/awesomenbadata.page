@@ -13,32 +13,32 @@ import { MdAttachMoney } from 'react-icons/md';
 
 const sidebarItems = [
   {
-    to: '/dashboard',
+    to: '/shotchart',
     icon: <HiOutlineTemplate tw="h-5 w-5" />,
     text: 'Dashboard',
   },
   {
-    to: '/team',
-    icon: <MdAttachMoney tw="h-5 w-5" />,
+    to: '/shotchart',
+    icon: <HiOutlineClipboardCheck tw="h-5 w-5" />,
     text: 'Team',
   },
   {
-    to: '/player',
-    icon: <BiFoodMenu tw="h-5 w-5" />,
+    to: '/shotchart',
+    icon: <HiOutlineClipboardCheck tw="h-5 w-5" />,
     text: 'Player',
   },
   {
-    to: '/stats',
+    to: '/shotchart',
     icon: <HiOutlineClipboardCheck tw="h-5 w-5" />,
     text: 'Stats',
   },
   {
-    to: '/data',
-    icon: <HiOutlineShoppingCart tw="h-5 w-5" />,
+    to: '/shotchart',
+    icon: <HiOutlineClipboardCheck tw="h-5 w-5" />,
     text: 'Data',
   },
   {
-    to: '/settings',
+    to: '/shotchart',
     icon: <HiOutlineCog tw="h-5 w-5" />,
     text: 'Settings',
   },

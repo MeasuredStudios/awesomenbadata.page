@@ -11,7 +11,7 @@ const ThemeToggle = () => {
   }
 
   return (
-    <div tw="flex flex-col items-center space-y-10 bg-primary p-2 rounded-lg">
+    <div tw="flex flex-col items-center space-y-10 bg-primary rounded-lg">
       <button
         tw="w-6 h-6 focus:outline-none fill-current text-primary hover:text-secondary"
         onClick={() => setTheme(isDark() ? 'light' : 'dark')}
