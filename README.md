@@ -30,7 +30,3 @@ To view the project you can open `http://localhost:8000`.
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
-
----
-
-Inspired by João Pedro Schmitz's [gatsby-starter-ts's template](https://github.com/jpedroschmitz/gatsby-starter-ts)
