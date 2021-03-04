@@ -1,7 +1,7 @@
 import * as React from 'react';
 import 'twin.macro';
-import Layout from '../components/Layout';
 import '../styles/charts.css';
+import Layout from '../components/Layout';
 import * as D3 from 'd3';
 //https://github.com/d3/d3-hexbin
 //https://github.com/d3/d3-hexbin/issues/16
@@ -11,10 +11,9 @@ const d3 = {
   ...D3,
   hex: Hexbin,
 };
-
+import { PageProps } from 'gatsby';
 // Rushed and did not use useStaticQuery REFACTOR
 import data from '../data/data-processed/nba-stats-ja-morant-shot-chart-2019-20.json';
-import { PageProps } from 'gatsby';
 
 interface ShotDataConfig {
   x: number;
@@ -30,7 +29,7 @@ interface ShotDataConfig {
 
 export const shotData: Array<ShotDataConfig> = data;
 
-const ShotChart = (props) => {
+const ShotChartD3 = (props) => {
   console.log(props.shotData);
   const [shotData, setShotData] = React.useState<any>(props.shotData);
   const svgRef = React.useRef<SVGSVGElement>(null);
@@ -222,7 +221,7 @@ const ShotChart = (props) => {
   );
 };
 
-const Home: React.FC<PageProps> = () => (
+const ShotChart: React.FC<PageProps> = () => (
   <Layout>
     <div tw="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
       <h1 tw="font-bold text-5xl tracking-tight mb-4">Ja Morant Shot Chart</h1>
@@ -285,4 +284,4 @@ const Home: React.FC<PageProps> = () => (
   </Layout>
 );
 
-export default Home;
+export default ShotChart;
