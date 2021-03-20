@@ -44,7 +44,7 @@
     "framer-motion": "3.10.5",
     "@emotion/react": "11.1.5",
     "@emotion/styled": "11.1.5",
-    "tailwindcss": "2.0.3",
+    "tailwindcss": "2.0.4",
     "twin.macro": "2.3.0",
     "resize-observer-polyfill": "1.5.1",
     "gatsby": "3.0.4",
