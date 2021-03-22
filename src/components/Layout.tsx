@@ -6,152 +6,391 @@ import { GlobalStyles } from 'twin.macro';
 import ThemeToggle from './themeToggle';
 import stylesBase from './stylesBase';
 
+const TileArticle = () => {
+  return (
+    <article tw="relative">
+      <span tw="before:(content block absolute top-0 left-0 w-full h-full z-10 bg-blue-300 opacity-60) relative block w-full rounded-sm overflow-hidden md:transform md:hover:-translate-y-2 md:transition-transform after:(content block absolute top-0 left-0 w-full h-full opacity-20 z-20)">
+        <img
+          tw="block w-full rounded-sm"
+          src="https://source.unsplash.com/random/256x256"
+          alt="unsplash"
+        />
+      </span>
+      <a tw="flex flex-col items-center justify-center absolute top-0 left-0 w-full h-full p-1 z-30 border-b-0 text-center">
+        <h2 tw="m-0 text-2xl">STATS LINK</h2>
+      </a>
+    </article>
+  );
+};
+
 const Main = (props) => {
   return (
-    <div id="body" tw="w-full ml-0 pl-0 lg:ml-64 lg:pl-0">
+    <div id="body" tw="w-full ml-0 pl-0">
       {props.children}
     </div>
   );
 };
 
-const ExternalLink: React.FC = ({ href, children }) => {
-  return (
-    <a
-      tw="text-sm text-gray-500 hover:text-gray-600 transition"
-      target="_blank"
-      rel="noopener noreferrer"
-      href={href}
-    >
-      {children}
-    </a>
-  );
-};
-
-const Footer: React.FC = () => {
-  return (
-    <footer tw="flex flex-col items-center mb-8">
-      <div tw="flex space-x-4 mb-4">
-        <ExternalLink href="?">
-          <span tw="sr-only">?</span>
-          <svg tw="h-5 w-5" viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-            </g>
-          </svg>
-        </ExternalLink>
-        <ExternalLink href="?">
-          <span tw="sr-only">?</span>
-          <svg tw="h-5 w-5" viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </g>
-          </svg>
-        </ExternalLink>
-        <ExternalLink href="?">
-          <span tw="sr-only">?</span>
-          <svg tw="h-5 w-5" viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect x="2" y="9" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </g>
-          </svg>
-        </ExternalLink>
-        <ExternalLink href="?">
-          <span tw="sr-only">?</span>
-          <svg tw="h-5 w-5" viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z" />
-              <path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z" />
-            </g>
-          </svg>
-        </ExternalLink>
-        <ExternalLink href="?">
-          <span tw="sr-only">?</span>
-          <svg tw="h-5 w-5" viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </g>
-          </svg>
-        </ExternalLink>
-        <ExternalLink href="?">
-          <span tw="sr-only">?</span>
-          <svg tw="h-5 w-5" viewBox="0 0 24 24">
-            <path
-              d="M20.519 12.439h-.672a4.152 4.152 0 003.402-4.078 4.152 4.152 0 00-4.147-4.147 4.15 4.15 0 00-4.138 3.934 3.852 3.852 0 00-3.663-2.675 3.848 3.848 0 00-3.803 3.303 3.59 3.59 0 00-3.31-2.213 3.587 3.587 0 00-3.582 3.585c0 1.456.873 2.711 2.123 3.271A3.032 3.032 0 000 16.431v2.555a.8.8 0 101.6 0V16.43a1.43 1.43 0 011.43-1.427h2.336c.789 0 1.43.64 1.43 1.427v2.555a.8.8 0 101.6 0V16.19a1.64 1.64 0 011.64-1.635h2.555c.904 0 1.638.733 1.639 1.635v2.795a.8.8 0 101.6 0v-2.794-.277a1.88 1.88 0 011.88-1.876h2.81a1.88 1.88 0 011.88 1.876v3.07a.8.8 0 101.6 0v-3.07a3.483 3.483 0 00-3.481-3.476zm-1.417-6.625a2.55 2.55 0 012.547 2.547 2.55 2.55 0 01-2.547 2.546 2.547 2.547 0 010-5.093zM11.3 7.074a2.248 2.248 0 012.246 2.244 2.248 2.248 0 01-2.246 2.245 2.246 2.246 0 010-4.49zm-7.114 1.09c1.094 0 1.984.89 1.984 1.984 0 1.093-.89 1.983-1.984 1.983a1.984 1.984 0 010-3.968zm3.267 6.076a3.021 3.021 0 00-1.805-.822 3.594 3.594 0 002.076-2.697 3.861 3.861 0 002.335 2.235h-.024c-1.053 0-1.99.505-2.582 1.284zm7.422-.339a3.23 3.23 0 00-2.285-.945h-.048a3.852 3.852 0 002.595-3.39 4.157 4.157 0 003.22 2.873h-.647a3.48 3.48 0 00-2.835 1.462z"
-              fill="currentColor"
-            />
-          </svg>
-        </ExternalLink>
-      </div>
-      <div tw="space-x-3">
-        <a href="/uses" tw="text-sm text-gray-500 hover:text-gray-600">
-          /uses
-        </a>
-        <ExternalLink href="">?</ExternalLink>
-        <a href="?" tw="text-sm text-gray-500 hover:text-gray-600">
-          ?
-        </a>
-        <a href="?" tw="text-sm text-gray-500 hover:text-gray-600">
-          ?
-        </a>
-        <a href="?" tw="text-sm text-gray-500 hover:text-gray-600">
-          ?
-        </a>
-      </div>
-    </footer>
-  );
-};
-
 const Layout: React.FC = ({ children, ...rest }) => {
-  const [mobileNav, toggleMobileNav] = React.useState(false);
   return (
     <>
       <GlobalStyles />
       <Global styles={stylesBase} />
       <div tw="relative min-h-screen overflow-hidden" {...rest}>
-        <div tw="flex mb-4">
-          <SideBar
-            mobileNav={mobileNav}
-            onClickMenu={() => toggleMobileNav(!mobileNav)}
-          />
+        <div tw="flex flex-col mb-4">
           <Main>
-            <NavBar onClickMenu={() => toggleMobileNav(!mobileNav)} />
-            <div tw="pb-10 pl-8 pr-4 pb-5 pt-7">{children}</div>
+            <NavBar />
+            <section id="hero" tw="pt-8 md:pt-32 pb-24 md:pb-36">
+              <div tw="max-w-screen-xl m-auto px-5">
+                <img
+                  src="https://c10.patreonusercontent.com/3/eyJ3IjoyMDB9/patreon-media/p/campaign/1425584/3e4738d1c5a64e049ef8be43e005cad0/1.jpeg?token-time=2145916800&token-hash=MMIY2tmERFi2C_i10TZyq7CwxwygnYcGwPE59-kyNK0%3D"
+                  tw="rounded-full w-16 h-16 mb-5"
+                  alt="my avatar"
+                  width={64}
+                  height={64}
+                />
+                <div tw="grid grid-cols-12 gap-5">
+                  <div tw="col-start-1 col-end-12 lg:col-end-10">
+                    <h1 tw="text-8xl md:text-7xl tracking-tighter font-bold md:mb-3">
+                      Top scorers in NBA history
+                    </h1>
+                    <p tw="block text-xl tracking-tight text-gray-700 mb-10 md:w-2/3">
+                      with new data and a deeper look at the all-time best
+                      scorers in NBA history. What makes someone a great scorer?
+                      What misconceptions are common about volume vs.
+                      efficiency, on-ball vs. off-ball scoring and finishing vs.
+                      dependency.
+                    </p>
+                    <p>Listen to the podcast or read the article.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="works" tw="pb-24 md:pb-36">
+              <div tw="px-5 max-w-screen-xl lg:mx-auto">
+                <div tw="py-10 grid gap-x-2 gap-y-5 sm:gap-y-2 grid-cols-1 md:grid-cols-3 md:grid-flow-row-dense">
+                  <div tw="md:col-span-3">
+                    <h2 tw="mb-10 text-6xl tracking-tighter font-bold">
+                      Players
+                    </h2>
+                    <p tw="text-xl tracking-tight">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                  <a
+                    href="/works/99/"
+                    title="view 99.co"
+                    tw="flex flex-col justify-between relative md:transform md:hover:-translate-y-2 md:transition-transform"
+                  >
+                    <article style={{ backgroundColor: '#D5E7F3' }}>
+                      <header tw="p-5 lg:p-8 h-24 md:h-48">
+                        <span tw="text-3xl tracking-tighter font-bold block">
+                          LeBron James
+                        </span>
+                        <span tw="text-base font-normal">2011-2014</span>
+                      </header>
+                      <picture tw="block">
+                        <img
+                          loading="lazy"
+                          src="https://res.cloudinary.com/kailoon/image/upload/q_auto,f_auto,w_400/99-featured.webp"
+                          srcSet="https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_400/kailoon.com/99-featured.webp 400w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_600/kailoon.com/99-featured.webp 600w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_768/kailoon.com/99-featured.webp 768w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_820/kailoon.com/99-featured.webp 820w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_1240/kailoon.com/99-featured.webp 1240w"
+                          alt="99.co"
+                          width={400}
+                          height={300}
+                          sizes="100vw"
+                        />
+                      </picture>
+                    </article>
+                  </a>
+                  <a
+                    href="/works/envato-marketplaces-logo/"
+                    title="view Envato Marketplaces"
+                    tw="flex flex-col justify-between bg-gray-800 relative md:transform md:hover:-translate-y-2 md:transition-transform"
+                  >
+                    <article style={{ backgroundColor: '#E8E8E8' }}>
+                      <header tw="p-5 lg:p-8 h-24 md:h-48">
+                        <span tw="text-3xl tracking-tighter font-bold block">
+                          Kevin Garnett
+                        </span>
+                        <span tw="text-base font-normal">2011-2014</span>
+                      </header>
+                      <picture tw="block">
+                        <img
+                          loading="lazy"
+                          src="https://res.cloudinary.com/kailoon/image/upload/q_auto,f_auto,w_400/99-featured.webp"
+                          srcSet="https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_400/kailoon.com/99-featured.webp 400w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_600/kailoon.com/99-featured.webp 600w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_768/kailoon.com/99-featured.webp 768w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_820/kailoon.com/99-featured.webp 820w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_1240/kailoon.com/99-featured.webp 1240w"
+                          alt="99.co"
+                          width={400}
+                          height={300}
+                          sizes="100vw"
+                        />
+                      </picture>
+                    </article>
+                  </a>
+                  <a
+                    href="/works/qbasis/"
+                    title="view Qbasis"
+                    tw="flex flex-col justify-between bg-gray-800 relative md:transform md:hover:-translate-y-2 md:transition-transform"
+                  >
+                    <article style={{ backgroundColor: '#E3F0D0' }}>
+                      <header tw="p-5 lg:p-8 h-24 md:h-48">
+                        <span tw="text-3xl tracking-tighter font-bold block">
+                          Dwyane Wade
+                        </span>
+                        <span tw="text-base font-normal">2011-2014</span>
+                      </header>
+                      <picture tw="block">
+                        <img
+                          loading="lazy"
+                          src="https://res.cloudinary.com/kailoon/image/upload/q_auto,f_auto,w_400/99-featured.webp"
+                          srcSet="https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_400/kailoon.com/99-featured.webp 400w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_600/kailoon.com/99-featured.webp 600w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_768/kailoon.com/99-featured.webp 768w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_820/kailoon.com/99-featured.webp 820w, https://res.cloudinary.com/kailoon/image/upload/dpr_auto,q_auto,w_1240/kailoon.com/99-featured.webp 1240w"
+                          alt="99.co"
+                          width={400}
+                          height={300}
+                          sizes="100vw"
+                        />
+                      </picture>
+                    </article>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section id="services" tw="pb-24 md:pb-36">
+              <div tw="max-w-screen-xl m-auto px-5">
+                <div tw="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                  <div tw="sm:col-span-2 md:col-span-3 md:mb-5 sm:w-4/6">
+                    <h2 tw="mb-10 text-6xl tracking-tighter font-bold">
+                      Seasons
+                    </h2>
+                    <p tw="text-xl tracking-tight">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 tw="font-bold mb-8 text-3xl tracking-tight">80's</h3>
+                    <p tw="md:pb-5 text-xl tracking-tight">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <ul tw="leading-8">
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 tw="font-bold mb-8 text-3xl tracking-tight">90's</h3>
+                    <p tw="md:pb-5 text-xl tracking-tight">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <ul tw="leading-8">
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 tw="font-bold mb-8 text-3xl tracking-tight">00's</h3>
+                    <p tw="md:pb-5 text-xl tracking-tight">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <ul tw="leading-8">
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                      <li tw="font-bold tracking-tight"># year</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="stats" tw="pb-24 md:pb-36">
+              <div tw="max-w-screen-xl m-auto px-5">
+                <div tw="container px-5 mx-auto">
+                  <h2 tw="mb-10 text-6xl tracking-tighter font-bold">Stats</h2>
+                  <section tw="grid grid-cols-3 gap-x-8 gap-y-16">
+                    <TileArticle />
+                    <TileArticle />
+                    <TileArticle />
+                    <TileArticle />
+                    <TileArticle />
+                    <TileArticle />
+                    <TileArticle />
+                    <TileArticle />
+                    <TileArticle />
+                  </section>
+                </div>
+              </div>
+            </section>
+            <div tw="relative max-w-screen-md mx-auto pb-24 md:pb-36 md:leading-tight text-center font-bold tracking-tighter text-3xl md:text-5xl px-10">
+              <span tw="block">🎧 & 📹</span>
+              Come a subscriber to thinking basketball
+              <br />
+              Check out the latest season and more on thinking basketball
+              youtube.
+              <div>
+                <a
+                  href=""
+                  title="get in touch"
+                  target="_blank"
+                  rel="noreferrer"
+                  tw="text-xl tracking-tight py-4"
+                >
+                  More?!?
+                </a>
+              </div>
+            </div>
           </Main>
+          <footer
+            id="footer"
+            tw="md:pt-6 md:pb-16 border-t border-gray-200 dark:border-gray-800"
+          >
+            <div tw="text-center md:text-left max-w-screen-xl m-auto sm:flex sm:justify-between sm:items-center text-sm pb-16 md:pb-0">
+              <p id="credit" tw="p-5 text-gray-500 dark:text-gray-400">
+                2021 © Thinking Basketball. This site was designed in
+                <a
+                  href="https://www.figma.com/"
+                  tw="text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="follow me on social media"
+                >
+                  figma
+                </a>
+                ,
+                <a
+                  href="https://www.gatsbyjs.com/"
+                  tw="text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="follow me on social media"
+                >
+                  Gatsby.js
+                </a>
+                ,
+                <a
+                  href="https://tailwindcss.com/"
+                  tw="text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="follow me on social media"
+                >
+                  tailwindcss
+                </a>{' '}
+                &amp;
+                <a
+                  href="https://www.netlify.com/"
+                  tw="text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="follow me on social media"
+                >
+                  deployed via Netlify
+                </a>
+                .
+              </p>
+              <p tw="p-5">
+                <span tw="inline-flex space-x-5 leading-tight">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    tw="font-bold text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                    title="follow me on social"
+                  >
+                    book.
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    tw="font-bold text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                    title="follow me on social"
+                  >
+                    youtube.
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    tw="font-bold text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                    title="follow me on social"
+                  >
+                    podcast.
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    tw="font-bold text-black hover:text-purple-800 dark:text-gray-200 dark:hover:text-yellow-200"
+                    title="follow me on social"
+                  >
+                    twitter.
+                  </a>
+                </span>
+              </p>
+              {/* sticky footer for mobile */}
+              <div
+                id="sticky-footer"
+                tw="md:hidden text-base w-full px-5 flex justify-between items-center fixed bottom-0 bg-black md:relative dark:bg-purple-900"
+              >
+                <a
+                  href=""
+                  tw="text-gray-300 py-4 dark:text-purple-300
+
+          "
+                >
+                  book.
+                </a>
+                <a
+                  href=""
+                  tw="text-gray-300 py-4 dark:text-purple-300
+
+          "
+                >
+                  youtube.
+                </a>
+                <a
+                  href=""
+                  tw="text-gray-300 py-4 dark:text-purple-300
+
+          "
+                >
+                  podcast.
+                </a>
+                <a
+                  href=""
+                  title="get in touch"
+                  target="_blank"
+                  rel="noreferrer"
+                  tw="text-gray-300 py-4 dark:text-purple-300"
+                >
+                  twitter.
+                </a>
+              </div>
+            </div>
+          </footer>
         </div>
-        <Footer />
       </div>
     </>
   );
