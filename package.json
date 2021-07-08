@@ -45,7 +45,7 @@
     "@emotion/react": "11.4.0",
     "@emotion/styled": "11.3.0",
     "tailwindcss": "2.1.2",
-    "twin.macro": "2.4.1",
+    "twin.macro": "2.6.2",
     "resize-observer-polyfill": "1.5.1",
     "gatsby": "3.5.1",
     "gatsby-image": "3.5.0",
